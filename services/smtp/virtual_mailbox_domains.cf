@@ -1,0 +1,5 @@
+user = your_postgres_user
+password = your_postgres_password
+hosts = localhost
+dbname = your_postgres_db
+query = SELECT 1 FROM virtual_domains WHERE domain='%s'

@@ -1,0 +1,8 @@
+# Postfix main configuration file
+
+# Specify PostgreSQL as the lookup table type
+virtual_mailbox_domains = proxy:mysql:/etc/postfix/virtual_mailbox_domains.cf
+virtual_mailbox_maps = proxy:mysql:/etc/postfix/virtual_mailbox_maps.cf
+virtual_alias_maps = proxy:mysql:/etc/postfix/virtual_alias_maps.cf
+virtual_mailbox_base = /var/mail/vhosts
+virtual_transport = lmtp:unix:private/dovecot-lmtp
